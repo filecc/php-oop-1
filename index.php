@@ -10,17 +10,17 @@ $movies =
     ];
 ?>
 
-<div class="container d-flex gap-2 flex-wrap">
+<div class="container d-flex gap-2 flex-wrap pt-5">
     <?php foreach ($movies as $movie) { ?>
         <div class="card" style="width: 18rem;">
           <?php echo $movie->getImage(); ?>
             <div class="card-body">
                 <h5 class="card-title"><?php echo $movie->title ?></h5>
-                <small>Titolo originale: <?php echo $movie->original_title ?></small>
+                <small><?php echo $movie->original_title ?></small>
                 <?php echo $movie->getInfo();?>
             </div>
         </div>
-    <?php    } ?>
+    <?php } ?>
 </div>
 
 <?php include __DIR__ . '/partials/footer.php'; ?>
