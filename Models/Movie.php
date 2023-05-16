@@ -17,6 +17,13 @@ class Movie{
         $this->vote = $vote;
         $this->image = $image;
     }
+    public function getImage(){
+        return "<img class='card-img-top h-100' src='$this->image' alt='$this->title'>";
+    }
+    public function getInfo(){
+        $date = explode("-", $this->date);
+        return "<span class='card-text d-block'>$this->nationality - $date[0] - $this->vote</span>";
+    }
 
     
 }
